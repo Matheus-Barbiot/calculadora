@@ -9,7 +9,7 @@ function Resultado(props){
 
     return (
         <>
-        <div className="botao" style={{backgroundColor:'orange'}} onClick={substituir}>
+        <div className="botao" id="resultado" onClick={substituir}>
             {props.sym}
         </div>
         </>

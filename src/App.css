@@ -12,11 +12,11 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
 
 #display {
     display: block;
+    position: relative;
     background-color: rgba(120, 124, 120, 0.212);
     color: black;
     width: 275px;
@@ -29,13 +29,16 @@ main {
 #display > p {
     font-size: 2.5em;
     margin: 0;
+    word-wrap: break-word;
 }
 
 #display > p#res {
     font-size: 1.8em;
     color: rgba(0, 0, 0, 0.466);
     text-align: end;
-    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 #teclado {
@@ -55,6 +58,13 @@ main {
     background-color: rgb(39, 33, 65);
 }
 
+#resultado, #apagar {
+    background-color: orange;
+}
+#resultado:hover, #apagar:hover, #resultado:active, #apagar:active {
+    background-color: rgb(248, 179, 51);
+}
+
 .botao {
     background-color: rgb(75, 75, 75);
     color: white;
@@ -63,4 +73,34 @@ main {
     padding: 20px;
     border-radius: 50%;
     text-align: center;
+}
+
+#operacoes > .botao:hover, .botao:active{
+    background-color: rgb(58, 51, 90);
+}
+
+.botao:hover, .botao:active {
+    background-color: rgb(128, 128, 128);
+}
+
+
+@media screen and (min-width: 768px){
+    main {
+        flex-direction: row-reverse;
+    }
+
+    #display {
+        margin-top: 20px;
+        min-width: 400px;
+        min-height: 280px;
+    }
+
+    #display > p {
+        font-size: 3em;
+    }
+
+    #display > p#res {
+        font-size: 2em;
+    }
+    
 }

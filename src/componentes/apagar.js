@@ -14,7 +14,7 @@ function Apagar(props){
 
     return (
         <>
-        <div className="botao" style={{backgroundColor:'orange'}} onClick={apagar}>
+        <div className="botao" id="apagar" onClick={apagar}>
             {props.sym}
         </div>
         </>
