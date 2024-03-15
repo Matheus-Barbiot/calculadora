@@ -17,13 +17,25 @@ main {
 
 #display {
     display: block;
-    background-color: green;
+    background-color: rgba(120, 124, 120, 0.212);
     color: black;
-    height: 80px;
-    width: 300px;
+    width: 275px;
+    min-height: 100px;
     margin: 0 0 40px;
     padding: 0px 20px;
     border-radius: 30px;
+}
+
+#display > p {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#display > p#res {
+    font-size: 1.8em;
+    color: rgba(0, 0, 0, 0.466);
+    text-align: end;
+    margin: 0;
 }
 
 #teclado {

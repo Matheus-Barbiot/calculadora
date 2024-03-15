@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import Botao from './componentes/botao';
 import Apagar from './componentes/apagar';
-import Display from './componentes/display'
+import Resultado from './componentes/resultado';
+import Display from './componentes/display';
 
 import './App.css';
 
 function App() {
-  const [calculo, setCalc] = useState('')
+  const [calculo, setCalc] = useState('0')
   return (
     <>
     <main>
@@ -25,12 +26,13 @@ function App() {
           <Botao sym='9' value='9' calculo={calculo} setCalc={setCalc}/>
           <Botao sym='0' value='0' calculo={calculo} setCalc={setCalc}/>
           <Apagar sym='<-' calculo={calculo} setCalc={setCalc}/>
+          <Resultado sym='=' calculo={calculo} setCalc={setCalc}/>
         </div>
         <div id='operacoes'>
           <Botao sym='+' value='+' calculo={calculo} setCalc={setCalc}/>
           <Botao sym='-' value='-' calculo={calculo} setCalc={setCalc}/>
-          <Botao sym='x' value='*' calculo={calculo} setCalc={setCalc}/>
-          <Botao sym='%' value='/' calculo={calculo} setCalc={setCalc}/>
+          <Botao sym='x' value='x' calculo={calculo} setCalc={setCalc}/>
+          <Botao sym='÷' value='÷' calculo={calculo} setCalc={setCalc}/>
         </div>
       </div>
     </main>
